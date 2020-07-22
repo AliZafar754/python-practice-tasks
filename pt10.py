@@ -1,22 +1,32 @@
-class Person(object):
-    def getGender( self ):
-        return "Unknown"
+class Person:
+
+    def __init__(self):
+        pass
 
 
-class Male( Person ):
-    def getGender( self ):
-        return "Male"
+class Male(Person):
+    gender = "Male"
+
+    def getGender(self):
+        print(self.gender)
 
 
-aMale = Male()
-print(aMale.getGender())
+class Female(Person):
+    gender = "Female"
+
+    def getGender(self):
+        print(self.gender)
 
 
-class Female( Person ):
-    def getGender( self ):
-        return "Female"
+# Test Function
+def main():
+    obj1 = Male()
+    obj1.getGender()
+
+    obj2 = Female()
+    obj2.getGender()
 
 
-aFemale = Female()
-print(aFemale.getGender())
+if __name__ == "__main__":
+    main()
 
